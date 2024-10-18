@@ -147,7 +147,7 @@ function createChart(canvasId, location, data, labels, chartInstance, averageUVI
                     max: 10,
                     title: {
                         display: true,
-                        text: 'UV Index (1 = sunny, 10 = cloudy)'  
+                        text: 'Wolken Index (1 = sonnig, 10 = bewölkt)'  
                     },
                     grid: {
                         display: true, 
