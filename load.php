@@ -14,7 +14,7 @@ try {
 
     $stmt = $pdo->prepare($sql);
 
-    // Fügt jedes Element im Array in die Datenbank ein
+
     foreach ($dataArray as $item) {
         $stmt->execute([
             $item['location'],

@@ -1,8 +1,7 @@
 <?php
-// Titel der Seite setzen
-$title = "Übungsdateien für das ETL-Projekt";
+$title = "Tan-catcher";
 
-// Pfad zum Verzeichnis, in dem sich die Dateien befinden
+
 $dir = ".";
 
 // Header für die HTML-Seite
@@ -21,9 +20,9 @@ echo" Falls du hier keine, zu wenige oder zu viele Dateien siehst, musst du dein
 echo "<ul>\n";
 
 
-// Dateien und Verzeichnisse im aktuellen Verzeichnis lesen und sortieren
+
 $files = scandir($dir);
-sort($files); // Sortiert die Dateien alphabetisch
+sort($files); 
 
 foreach ($files as $entry) {
     if ($entry != "." && $entry != ".." && $entry != "index.php" && !is_dir($dir."/".$entry)) {

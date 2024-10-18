@@ -2,7 +2,6 @@
 
 $dataextract = include('extract.php');
 
-// Definiert eine Zuordnung von Koordinaten zu Stadtnamen
 $locationsMap = [
     '47.06,8.299999' => 'Lucerne',
     '46.84,9.52' => 'Chur',
