@@ -1,2 +1,2 @@
 .vscode
-config.php
+git rm --cached config.php
