@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tan-Chaser</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="design.css"> <!-- Link to your external CSS file -->
+</head>
+<body>
+
+    <!-- Header Section with the Title -->
+    <header>
+        <h1>Tan-Chaser</h1>
+    </header>
+
+    <!-- Container for floating clouds -->
+    <div class="cloud-container">  
+        <!-- Floating Cloud for UV Index Information Section -->
+        <section class="floating-cloud">
+            <h3>Crashkurs UV-Index?</h3>
+            <ul>
+                <p><i class="fas fa-cloud"></i> 1-3: Tiefer UV-Wert, geniesse deine Zeit draussen</p>
+                <p><i class="fas fa-cloud-sun"></i> 4-7: Normaler UV-Wert, bleibe achtsam</p>
+                <p><i class="fas fa-sun"></i> 8-10: Hocher UV-Wert, benutze Sonnencreme und bleib im Schatten</p>
+            </ul>
+        </section>
+
+        <!-- Floating Cloud for Did you know section -->
+        <section class="floating-cloud">
+            <h3>Did you know?</h3>
+            <p>Sogar an bewölkten Tagen können UV-Strahlen die Wolken durchdringen,</p>
+            <p>also trage immer Sonnencreme!</p>
+        </section>
+    </div>
+
+    <!-- Date picker for selecting a specific date -->
+    <section class="date-picker-container">
+        <label for="datePicker">Select a date: </label>
+        <input type="date" id="datePicker">
+        <button class="date-btn" onclick="fetchUVDataByDate()">Show Data</button>
+    </section>
+
+
+<div class="carousel-wrapper">
+    <button class="carousel-btn left-btn" onclick="prevChart()">&#10094;</button> 
+    <div class="chart-container">
+   
+
+    
+        <section id="luzern-container" class="carousel-chart active">
+            <h2>Luzern</h2>
+            <canvas id="uvIndexLuzern"></canvas>
+            <div class="uv-text" id="luzern-text"></div> 
+        </section>
+
+        <section id="chur-container" class="carousel-chart">
+            <h2>Chur</h2>
+            <canvas id="uvIndexChur"></canvas>
+            <div class="uv-text" id="chur-text"></div> 
+        </section>
+
+        <section id="locarno-container" class="carousel-chart">
+            <h2>Locarno</h2>
+            <canvas id="uvIndexLocarno"></canvas>
+            <div class="uv-text" id="locarno-text"></div> 
+        </section>
+    </div>
+    <button class="carousel-btn right-btn" onclick="nextChart()">&#10095;</button> 
+</div>
+
+    <!-- Add Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- External JavaScript file -->
+    <script src="chart.js"></script>
+
+
+</body>
+</html>
